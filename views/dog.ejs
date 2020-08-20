@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <meta charset="UTF-8">
+    <title>МОНОПОРОДНЫЙ ПИТОМНИК ПОРОДЫ РОТВЕЙЛЕР</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/sales.css">
+    <link rel="stylesheet" href="styles/dog.css">
+    <link rel="stylesheet" href="styles/adaptive.css">
+    <link rel="stylesheet" href="styles/hamburger.css">
+    <script src="animations.js"></script>
+    <script src="photos-slider.js"></script>
+    <script src="dog.js"></script>
+
+</head>
+
+<body>
+    <div id="photos-conteiner">
+        <div class="dog-photos">
+            <button class="nav-btn previous" id="previous-photo"></button>
+            <img id="dog-photo-img" alt="">
+            <button class="nav-btn next" id="next-photo"></button>
+        </div>
+        <button id="btn-close">Закрыть</button>
+    </div>
+    <nav class="top-menu" id="menu">
+        <img class="hamb-logo" src="imgs/logo-black.png" alt="">
+        <ul class="hamburger-navigation">
+            <li><a href="/" onclick="hamburger()">Главная</a></li>
+            <li><a href="#about" onclick="hamburger()">О нас</a></li>
+            <li><a href="#" onclick="hamburger()">Продажа</a></li>
+            <li><a href="/#our-dogs" onclick="hamburger()">Наши собаки</a></li>
+            <li><a href="#feedback" onclick="hamburger()">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger-button">
+        <button type="button" id="hamb-btn" class="menu-closed" onclick="hamburger()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div class="main-container">
+        <div class="menu-container">
+            <div class="logo">
+                <img src="imgs/logo-black.png" alt="">
+            </div>
+            <div class="navigation">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/#about">О нас</a></li>
+                <li><a href="#">Продажа</a></li>
+                <li><a href="/#our-dogs">Наши собаки</a></li>
+                <li><a href="#feedback">Контакты</a></li>
+            </div>
+            <div class="language">
+                <img src="imgs/russian-language.png" alt="">
+                <p>RU</p>
+            </div>
+        </div>
+        <div class="social-container">
+            <div class="sales-text">
+                <h1 class="container-title"><%=mainInfo.dog_name.toUpperCase()%></h1>
+                <p class="city"><%=mainInfo.place_of_living%></p>
+                <div class="buttons">
+                    <button class="btn-pets">Родословная</button>
+                    <button class="btn-pets" id="photos-btn">Фотографии</button>
+                </div>
+            </div>
+            <div class=dog-info>
+                <div class="dog-box-big dog-1" id="dog-avatar">
+                    <div class="dog-border">
+                        <div class="dog-container">
+                            <img src=<%=avatarInfo.image_src%>>
+                        </div>
+                    </div>
+                    <% if(mainInfo.gender == 1){ %>
+                        <p class="born male">
+                    <% } else{ %>  
+                        <p class="born female">
+                    <% } %>
+                    <%= 
+                    ("0" + (new Date(mainInfo.birthday + " UTC")).getUTCDate()).slice(-2) + "." +
+                    ("0" + (mainInfo.birthday.getUTCMonth()+1)).slice(-2) + "." +
+                    mainInfo.birthday.getUTCFullYear();
+                    %>
+                    </p>
+                </div>
+                <div class="ranks">
+                    <h2 class="ranks-title">Титулы:</h2>
+                    <% if(rankInfo.length == 0){ %>
+                        <p>У собаки пока нет никаких наград</p>
+                    <% } else{ %>  
+                        <% for (let rank of rankInfo) {%>
+                            <p><%=rank.dog_rank%></p>
+                        <%} %>
+                    <% } %>
+                    <div class="health">
+                        <p class="hd"><%=healthInfo.hd%></p>
+                        <p class="ed"><%=healthInfo.ed%></p>
+                        <p class="jlpp"><%=healthInfo.jlpp%></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-us">
+                <div class="more-box">
+                    <button onclick="goToAnchor('feedback')"> <img src="imgs/navigation/more.png" style="vertical-align: middle"><span>Связаться с нами</span></button>
+                </div>
+            </div>
+            <div class="social">
+                <button class="btn vk" onclick='social(this)'></button>
+                <button class="btn insta" onclick='social(this)'></button>
+                <button class="btn fb" onclick='social(this)'></button>
+            </div>
+        </div>
+        <div class="feedback-container" id="feedback">
+            <h1 class="container-title">ОБРАТНАЯ СВЯЗЬ</h1>
+            <p class="additional-info">Если у Вас есть вопросы, оставьте контакты и мы свяжемся с Вами в ближайшее время</p>
+            <div class="feedback-box">
+                <div class="feedback-img">
+                    <div class="img-frame">
+                        <img src="imgs/feedback-dog.jpg" alt="">
+                    </div>
+                </div>
+                <div class="feedback-form">
+                    <div class="feedback">
+                        <h1>Контактная форма</h1>
+                        <input type="text" placeholder="Имя*">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Телефон*">
+                        <textarea placeholder="Опишите подробно Ваш вопрос...*"></textarea>
+                        <button class="submit">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="imgs/logo-black.png" alt="">
+            </div>
+            <div class="main-content">
+                <div class="nav">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#">Продажа</a></li>
+                    <li><a href="#our-dogs">Наши собаки</a></li>
+                    <li><a href="#feedback">Контакты</a></li>
+                </div>
+                <p class=rights>© copyright 2020 Все права защищены</p>
+            </div>
+            <div class="contacts">
+                <div class="social-contacts">
+                    <div class="social-frame">
+                        <button class="btn vk" onclick='social(this)'></button>
+                    </div>
+                    <div class="social-frame">
+                        <button class="btn insta" onclick='social(this)'></button>
+                    </div>
+                    <div class="social-frame">
+                        <button class="btn fb" onclick='social(this)'></button>
+                    </div>
+                </div>
+                <div class="phones">
+                    <div class="phone-block">
+                        <p>+7 967 081-73-75 Юлия</p>
+                    </div>
+                    <div class="phone-block">
+                        <p>+7 960 566-91-03 Полина</p>
+                    </div>
+                    <div class="phone-additional">
+                        <p>Whats App, Viber, Telegram</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{
+    "mainTable": {
+        "name": "dogs",
+        "column": {
+            "id": "id",
+            "petName": "dog_name",
+            "petBirthday": "birthday",
+            "petGender": "gender",
+            "onSale": "on_sale",
+            "dogDescription": "dog_description",
+            "dogType": "dog_type",
+            "placeOfLiving": "place_of_living",
+            "father": "father",
+            "mother": "mother"
+        }
+    },
+    "healthTable": {
+        "name": "dogs_health"
+    },
+    "rankTable": {
+        "name": "dogs_ranks"
+    },
+    "imagesTable": {
+        "name": "dogs_images_src",
+        "column": {
+            "id": "id",
+            "dogId": "dog_id",
+            "imageSrc": "image_src",
+            "imageType": "image_type"
+        }
+    }
+}

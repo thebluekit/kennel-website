@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <meta charset="UTF-8">
+    <title>МОНОПОРОДНЫЙ ПИТОМНИК ПОРОДЫ РОТВЕЙЛЕР</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/adaptive.css">
+    <link rel="stylesheet" href="styles/hamburger.css">
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <script src="animations.js"></script>
+</head>
+
+<body>
+    <nav class="top-menu" id="menu">
+        <img class="hamb-logo" src="imgs/logo-black.png" alt="">
+        <ul class="hamburger-navigation">
+            <li><a href="#" onclick="hamburger()">Главная</a></li>
+            <li><a href="#about" onclick="hamburger()">О нас</a></li>
+            <li><a href="/sales" onclick="hamburger()">Продажа</a></li>
+            <li><a href="#our-dogs" onclick="hamburger()">Наши собаки</a></li>
+            <li><a href="#feedback" onclick="hamburger()">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger-button">
+        <button type="button" id="hamb-btn" class="menu-closed" onclick="hamburger()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div class="main-container">
+        <div class="menu-container">
+            <div class="logo">
+                <img src="imgs/logo-black.png" alt="">
+            </div>
+            <div class="navigation">
+                <li><a href="#" class="selected">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="/sales">Продажа</a></li>
+                <li><a href="#our-dogs">Наши собаки</a></li>
+                <li><a href="#feedback">Контакты</a></li>
+            </div>
+            <div class="language">
+                <img src="imgs/russian-language.png" alt="">
+                <p>RU</p>
+            </div>
+        </div>
+        <div class="welcome-container">
+            <div class="welcome-dog">
+                <img src="imgs/welcome-dog.png" alt="">
+            </div>
+            <div class="left-container">
+                <div class=front>
+                    <div class="title">
+                        <h1 class="selected">МОНОПОРОДНЫЙ</h1>
+                        <h1 class="selected">ПИТОМНИК</h1>
+                        <h1>ПОРОДЫ РОТВЕЙЛЕР</h1>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn-pets" onclick="goToLink('sales')">Наши щенки</button>
+                        <button class="btn-dogs" onclick="goToAnchor('our-dogs')">Наши собаки</button>
+                    </div>
+                </div>
+                <div class="back">
+                    <img src="imgs/paw-grey.png" alt="">
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="paw">
+                    <img src="imgs/paw-orange.png" alt="">
+                </div>
+            </div>
+            <div class="social">
+                <button class="btn vk" onclick='social(this)'></button>
+                <button class="btn insta" onclick='social(this)'></button>
+                <button class="btn fb" onclick='social(this)'></button>
+            </div>
+        </div>
+        <div class="about-container" id="about">
+            <div class="left-container">
+                <div class="about-text">
+                    <h1 class="container-title">О НАС</h1>
+                    <p><b>Максима Блэк</b> — монопородный питомник породы ротвейлер, основанный как на российских, так и на зарубежных кровях.</p>
+                    <p>Все наши собаки имеют проверки по здоровью: свободны от дисплазии, JLPP.</p>
+                    <p>Мы тщательно подбираем пары, стараясь получить не только красивое и стабильное по психике, но и здоровое поголовье.</p>
+                    <p>Наши собаки не содержатся в вольерах и очень ориентированы на человека.</p>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="img-frame">
+                    <img src="imgs/about-dog.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="advantages-container">
+            <h1 class="container-title">НАШИ ПРЕИМУЩЕСТВА</h1>
+            <div class="advantages">
+                <div class="advantage-box">
+                    <div class="img-container">
+                        <img src="imgs/advantages/pets.png" />
+                    </div>
+                    <p>Наши собаки содержатся только дома, рядом с человеком, никаких клеток и вольеров.
+                        Отлично подойдут как для домашнего, так и квартирного содержания</p>
+                </div>
+                <div class="advantage-box">
+                    <div class="img-container">
+                        <img src="imgs/advantages/teacher.png" />
+                    </div>
+                    <p>Мы предоставляем бесплатное консультирование и показ на выставках наших щенков.</p>
+                    <p class="more">Подробнее</p>
+                </div>
+                <div class="advantage-box">
+                    <div class="img-container">
+                        <img src="imgs/advantages/health.png" />
+                    </div>
+                    <p>Наш питомник сотрудничает и предоставляет скидки на торговую марку холистик-кормов Grandorf и услуги ветеринарного центра Шанс-Био</p>
+                </div>
+            </div>
+        </div>
+        <div class="achievements-container">
+            <h1 class="container-title">НАШИ НОВОСТИ</h1>
+            <div class="achievements">
+                <div class="left-container">
+                    <button class="nav-btn previous" onclick="photo_slider(this.parentNode, 'previous')"></button>
+                    <img class="active-img" src="imgs/achievments/test.png" alt="">
+                    <img src="imgs/achievments/test2.png" alt="">
+                    <img src="imgs/achievments/test3.png" alt="">
+                    <button class="nav-btn next" onclick="photo_slider(this.parentNode, 'next')"></button>
+                </div>
+                <div class="right-container">
+                    <h1 class="title">Международная выставка “Евразия-1” 2019</h1>
+                    <div class="dog-info">
+                        <p class="dog-name">Лерус Хаус Армани</p>
+                        <p class="dog-additional">Оч.Перспективная, резервный победитель класса сук беби</p>
+                    </div>
+                    <div class="dog-info">
+                        <p class="dog-name">Максима Блэк Ева</p>
+                        <p class="dog-additional">Отлично</p>
+                    </div>
+                    <div class="dog-info">
+                        <p class="dog-name">Акифа Оникс Юлиана</p>
+                        <p class="dog-additional">Отлично</p>
+                    </div>
+                    <p class="award-date">23 февраля 2019 года</p>
+                </div>
+            </div>
+            <div class="more-box">
+                <button> <img src="imgs/navigation/go-to.png" style="vertical-align: middle"><span>Подробнее</span></button>
+            </div>
+        </div>
+        <div class="dogs-container" id="our-dogs">
+            <h1 class="container-title">НАШИ СОБАКИ</h1>
+            <% for(var i=0; i < ourPets.length;i+=3) {%>
+                <% if(i == 0){ %>
+                    <div class="dogs">
+                  <% } else{ %>  
+                    <div class="dogs dogs-hidden">
+                 <% } %>
+                    <% for(var j=i; j < i + 3 && j < ourPets.length; j++) {%>
+                        <div class="dog-box dog-1" id=<%=ourPets[j].dog_id%> onclick="goToDog(this)">
+                            <div class="dog-border">
+                                <div class="dog-container">
+                                    <img src=<%=ourPets[j].image_src%>>
+                                </div>
+                            </div>
+                            <p class="name"><%=ourPets[j].dog_name%></p>
+                            <% if(ourPets[j].gender == 1){ %>
+                                <p class="born male">
+                            <% } else{ %>  
+                                <p class="born female">
+                            <% } %>
+                            <%= 
+                            ("0" + (new Date(ourPets[j].birthday + " UTC")).getUTCDate()).slice(-2) + "." +
+                            ("0" + (ourPets[j].birthday.getUTCMonth()+1)).slice(-2) + "." +
+                            ourPets[j].birthday.getUTCFullYear();
+                            %>
+                            </p>
+                        </div>
+                    <%} %>
+                </div>
+            <%} %>
+            <div class="more-box">
+                <button onclick="more_event(this.parentNode.parentNode)"> <img class="more-icon" src="imgs/navigation/more.png" style="vertical-align: middle"><span>Еще</span></button>
+            </div>
+        </div>
+        <div class="dogs-container" id="graduates">
+            <h1 class="container-title">НАШИ ВЫПУСКНИКИ</h1>
+            <% for(var i=0; i < graduates.length;i+=3) {%>
+                <% if(i == 0){ %>
+                    <div class="dogs">
+                  <% } else{ %>  
+                    <div class="dogs dogs-hidden">
+                 <% } %>
+                    <% for(var j=i; j < i + 3 && j < graduates.length; j++) {%>
+                        <div class="dog-box dog-1" id=<%=graduates[j].dog_id%> onclick="goToDog(this)">
+                            <div class="dog-border">
+                                <div class="dog-container">
+                                    <img src=<%=graduates[j].image_src%>>
+                                </div>
+                            </div>
+                            <p class="name"><%=graduates[j].dog_name%></p>
+                            <% if(graduates[j].gender == 1){ %>
+                                <p class="born male">
+                            <% } else{ %>  
+                                <p class="born female">
+                            <% } %>
+                            <%= 
+                            ("0" + (new Date(graduates[j].birthday + " UTC")).getUTCDate()).slice(-2) + "." +
+                            ("0" + (graduates[j].birthday.getUTCMonth()+1)).slice(-2) + "." +
+                            graduates[j].birthday.getUTCFullYear();
+                            %>
+                            </p>
+                        </div>
+                    <%} %>
+                </div>
+            <%} %>
+            <div class="more-box">
+                <button onclick="more_event(this.parentNode.parentNode)"> <img class="more-icon" src="imgs/navigation/more.png" style="vertical-align: middle"><span>Еще</span></button>
+            </div>
+        </div>
+        <div class="dogs-container" id="memorial">
+            <h1 class="container-title">МЕМОРИАЛ</h1>
+            <% for(var i=0; i < memorial.length;i+=3) {%>
+                <% if(i == 0){ %>
+                    <div class="dogs">
+                  <% } else{ %>  
+                    <div class="dogs dogs-hidden">
+                 <% } %>
+                    <% for(var j=i; j < i + 3 && j < memorial.length; j++) {%>
+                        <div class="dog-box dog-1" id=<%=memorial[j].dog_id%> onclick="goToDog(this)">
+                            <div class="dog-border">
+                                <div class="dog-container">
+                                    <img src=<%=memorial[j].image_src%>>
+                                </div>
+                            </div>
+                            <p class="name"><%=memorial[j].dog_name%></p>
+                            <% if(memorial[j].gender == 1){ %>
+                                <p class="born male">
+                            <% } else{ %>  
+                                <p class="born female">
+                            <% } %>
+                            <%= 
+                            ("0" + (new Date(memorial[j].birthday + " UTC")).getUTCDate()).slice(-2) + "." +
+                            ("0" + (memorial[j].birthday.getUTCMonth()+1)).slice(-2) + "." +
+                            memorial[j].birthday.getUTCFullYear();
+                            %>
+                            </p>
+                        </div>
+                    <%} %>
+                </div>
+            <%} %>
+            <div class="more-box">
+                <button onclick="more_event(this.parentNode.parentNode)"> <img class="more-icon" src="imgs/navigation/more.png" style="vertical-align: middle"><span>Еще</span></button>
+            </div>
+        </div>
+        <div class="feedback-container" id="feedback">
+            <h1 class="container-title">ОБРАТНАЯ СВЯЗЬ</h1>
+            <p class="additional-info">Если у Вас есть вопросы, оставьте контакты и мы свяжемся с Вами в ближайшее время</p>
+            <div class="feedback-box">
+                <div class="feedback-img">
+                    <div class="img-frame">
+                        <img src="imgs/feedback-dog.jpg" alt="">
+                    </div>
+                </div>
+                <div class="feedback-form">
+                    <div class="feedback">
+                        <h1>Контактная форма</h1>
+                        <input type="text" placeholder="Имя*">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Телефон*">
+                        <textarea placeholder="Опишите подробно Ваш вопрос...*"></textarea>
+                        <button class="submit">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="imgs/logo-black.png" alt="">
+            </div>
+            <div class="main-content">
+                <div class="nav">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#">Продажа</a></li>
+                    <li><a href="#our-dogs">Наши собаки</a></li>
+                    <li><a href="#feedback">Контакты</a></li>
+                </div>
+                <p class=rights>© copyright 2020 Все права защищены</p>
+            </div>
+            <div class="contacts">
+                <div class="social-contacts">
+                    <div class="social-frame">
+                        <button class="btn vk" onclick='social(this)'></button>
+                    </div>
+                    <div class="social-frame">
+                        <button class="btn insta" onclick='social(this)'></button>
+                    </div>
+                    <div class="social-frame">
+                        <button class="btn fb" onclick='social(this)'></button>
+                    </div>
+                </div>
+                <div class="phones">
+                    <div class="phone-block">
+                        <p>+7 967 081-73-75 Юлия</p>
+                    </div>
+                    <div class="phone-block">
+                        <p>+7 960 566-91-03 Полина</p>
+                    </div>
+                    <div class="phone-additional">
+                        <p>Whats App, Viber, Telegram</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

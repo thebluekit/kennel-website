@@ -1,0 +1,425 @@
+@media (max-width: 1600px) {
+    .welcome-dog img {
+        left: 11%;
+    }
+
+    .feedback-img img {
+        margin: 0;
+        max-width: 600px;
+
+    }
+}
+
+@media (max-width: 1300px) {
+    .welcome-dog img {
+        left: 21%;
+    }
+
+    .feedback-img img {
+        margin: 0;
+        max-width: 470px;
+
+    }
+}
+
+@media (max-width: 1100px) {
+    .welcome-dog img {
+        left: 27%;
+    }
+
+    .about-container .right-container img {
+        max-width: 350px !important;
+
+    }
+
+    .img-frame {
+        width: 270px !important;
+        height: 220px !important;
+    }
+
+    .feedback-img img {
+        margin: 0;
+        max-width: 370px;
+
+    }
+
+}
+
+@media (max-width: 800px) {
+    .logo img {
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .welcome-container .title h1 {
+        font-size: 46px;
+
+    }
+
+    .welcome-container .left-container .back img {
+        max-width: 450px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .welcome-container .title h1 {
+        font-size: 36px;
+
+    }
+
+    .buttons button {
+        font-size: 16px;
+
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .welcome-container .social .vk {
+        background-size: 15px 15px !important;
+        height: 15px !important;
+        width: 15px !important;
+    }
+
+    .welcome-container .social .insta {
+        background-size: 15px 15px !important;
+        height: 15px !important;
+        width: 15px !important;
+    }
+
+    .welcome-container .social .fb {
+        background-size: 15px 15px !important;
+        height: 15px !important;
+        width: 15px !important;
+    }
+
+    .welcome-container .left-container .back img {
+        max-width: 300px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    /*    .menu-container .navigation p {
+        font-size: 12px;
+    }*/
+
+    .welcome-container .right-container .paw img {
+        max-width: 220px;
+    }
+
+    .about-container .right-container img {
+        max-width: 280px !important;
+
+    }
+
+    .img-frame {
+        width: 180px !important;
+        height: 170px !important;
+    }
+
+    .advantages-container .container-title {
+        font-size: 36px;
+
+    }
+
+    .feedback-img img {
+        margin: 0;
+        max-width: 270px;
+
+    }
+
+}
+
+@media (max-width: 400px) {
+    .welcome-container .title h1 {
+        font-size: 30px;
+        line-height: 10px;
+
+    }
+
+    .about-container .right-container img {
+        max-width: 220px !important;
+
+    }
+
+    .img-frame {
+        width: 140px !important;
+        height: 130px !important;
+    }
+
+    .feedback-img img {
+        margin: 0;
+        max-width: 230px;
+
+    }
+
+    .container-title {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 365px) {
+    .welcome-container .title h1 {
+        font-size: 22px;
+
+    }
+
+    .welcome-container .left-container .back img {
+        max-width: 250px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    /*    .menu-container .navigation p {
+        font-size: 9px;
+    }*/
+
+    .about-container .left-container p {
+        line-height: 20px !important;
+        font-size: 15px !important;
+    }
+
+    .advantages-container .container-title {
+        font-size: 30px;
+    }
+
+    .feedback-img img {
+        margin: 0;
+        max-width: 200px;
+
+    }
+
+    .achievements-container .left-container img {
+        max-width: 200px;
+    }
+}
+
+@media (orientation: portrait) {
+
+    .hamburger-button {
+        display: inline !important;
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    .welcome-container {
+        flex-direction: column;
+    }
+
+    .welcome-container .right-container {
+        border-radius: 50% 50% 0px 0px;
+        flex: 709;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .welcome-dog img {
+        max-height: 50%;
+        left: 0;
+    }
+
+    .language p {
+        color: black;
+    }
+
+    .welcome-container .social .vk {
+        background: url(../imgs/social/vk-black.png);
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .welcome-container .social .insta {
+        background: url(../imgs/social/insta-black.png);
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .welcome-container .social .fb {
+        background: url(../imgs/social/fb-black.png);
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (orientation: portrait),
+(max-width: 1000px) {
+
+
+    .about-container {
+        flex-direction: column !important;
+    }
+
+    .about-container .left-container {
+        flex: 1 !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: left !important;
+        align-items: left !important;
+    }
+
+
+    .about-container .about-text {
+        margin: 15px;
+        width: 100% !important;
+    }
+
+    .advantages {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .achievements {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .achievements-container .left-container {
+        border-right: 0;
+    }
+
+    .dogs {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .feedback-container .feedback-box {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .feedback-container .additional-info {
+        width: 90%;
+
+    }
+
+    .feedback {
+        width: 95%;
+    }
+
+    .footer {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .footer .main-content {
+        margin-bottom: 40px;
+    }
+
+    .dog-info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.5em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dog-box-big {
+        margin: auto;
+    }
+
+    .dog-container {
+        width: 270px;
+        height: 270px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+    .hamburger-button {
+        display: inline !important;
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    .welcome-container .title h1 {
+        font-size: 40px;
+
+    }
+}
+
+@media (orientation: landscape) and (max-width: 800px) {
+    .welcome-container .title h1 {
+        font-size: 28px;
+
+    }
+
+    .buttons button {
+        display: block;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 720px) {
+    .welcome-container .title h1 {
+        font-size: 22px;
+
+    }
+
+}
+
+@media (max-height: 400px) {
+    .top-menu .hamb-logo {
+        max-width: none !important;
+        height: 70px;
+        width: auto !important;
+
+    }
+}
+
+@media (max-height: 850px) {
+    #dog-photo-img {
+        max-height: 600px;
+    }
+}
+
+
+@media (max-height: 750px) {
+    #dog-photo-img {
+        max-height: 500px;
+    }
+}
+
+
+@media (max-height: 650px) {
+    #dog-photo-img {
+        max-height: 400px;
+    }
+}
+
+
+@media (max-height: 550px) {
+    #dog-photo-img {
+        max-height: 400px;
+    }
+}
+
+
+@media (max-height: 450px) {
+    #dog-photo-img {
+        max-height: 300px;
+    }
+}
