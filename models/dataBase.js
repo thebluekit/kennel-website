@@ -82,7 +82,48 @@ class DBFinder {
     }
 }
 
-const dbController = new DBController();
-const dbFinder = new DBFinder(dbController)
+class DBModifier {
+    constructor(dbController) {
+        let db = dbController;
+        this.db = db;
+        this.tablesDescription = db.tablesDescription;
+    }
 
-export {dbFinder};
+    async getTableColumns(tableName) {
+        let tableColumns = await this.db.directQuerry(`select column_name from 
+        information_schema.columns where table_name = '${tableName}';`);
+
+        let columns = []
+
+        for (let column of tableColumns) {
+            columns.push(column.column_name);
+        }
+        columns = columns.slice(1, columns.length);
+        return columns;
+    }
+
+    async addRow(table, values) {
+        let columns = await this.getTableColumns(table);
+        
+        for (let i=0; i < values.length; i++) {
+            if (typeof values[i] == 'undefined') {
+                values[i] = "NULL";
+            }
+
+            else if (typeof values[i] != 'number') {
+                values[i] = "'" + values[i] + "'";
+            };
+        }
+
+        let querry = `INSERT INTO ${table}(${columns.join(", ")}) VALUES (${values.join(", ")}) RETURNING id;`
+        return this.db.directQuerry(querry, true);
+    }
+
+    
+}
+
+const dbController = new DBController();
+const dbFinder = new DBFinder(dbController);
+const dbModifier = new DBModifier(dbController);
+
+export {dbFinder, dbModifier};
