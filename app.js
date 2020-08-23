@@ -1,4 +1,5 @@
 import express from "express";
+import favicon from 'serve-favicon';
 import path from 'path';
 import dotenv from 'dotenv';
 
@@ -9,10 +10,10 @@ const __dirname = path.resolve();
 
 dotenv.config();
 
-
 let app = express();
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/imgs/favicon.ico'));
 
 app.use("/", pagesRouter);
 app.use("/api", apiRouter);
