@@ -12,8 +12,7 @@ class PetExplorer {
         let querry = `SELECT dog_id, dog_name, birthday, gender,
         image_src FROM dogs INNER JOIN dogs_images_src ON
         dogs_images_src.dog_id = dogs.id AND dogs.on_sale ='1'
-        AND dogs_images_src.image_type='avatar'`
-
+        AND dogs_images_src.image_type='avatar' ORDER BY dog_id`
         return {petsOnSale: await this.dbController.directQuerry(querry)};
     }
 
@@ -42,7 +41,7 @@ class PetExplorer {
         INNER JOIN dogs_images_src ON
         dogs_images_src.dog_id = dogs.id
         AND dogs.dog_type='${petType}'
-        AND dogs_images_src.image_type='avatar';`
+        AND dogs_images_src.image_type='avatar' ORDER BY dog_id`
         
         return this.dbController.directQuerry(querry);
     }
