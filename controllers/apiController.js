@@ -19,6 +19,15 @@ let petInfo = function(req, res) {
   })
 };
 
+let petPedigree = function(req, res) {
+  let petId = req.param('id');
+  let pedigree = petExplorer.getPetPedigree(petId);
+
+  pedigree.then(function(result) {
+    res.send(result);
+  })
+};
+
 let sendFeedback = function(req, res) {  
   let feedbackRequest = feedback.addFeedback(req.body.userName, 
     req.body.userEmail, req.body.userPhone, req.body.userQuestion);
@@ -27,4 +36,4 @@ let sendFeedback = function(req, res) {
   })
 };
 
-export {petPhotos, petInfo, sendFeedback};
+export {petPhotos, petInfo, sendFeedback, petPedigree};

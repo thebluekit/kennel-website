@@ -35,6 +35,11 @@ class PetExplorer {
         return this.dbFinder.querryWithCond(photosQuerry);
     }
 
+    async getPetPedigree (petId) {
+        let querry = `SELECT pedigree_link FROM dogs WHERE id=${petId}`
+        return this.dbController.directQuerry(querry, true);
+    }
+
     async getPetsByType (petType) {
         let querry =
         `SELECT dog_id, dog_name, birthday, gender, dog_type, image_src FROM dogs
