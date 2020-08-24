@@ -834,7 +834,7 @@ body {
     border-radius: 2px;
     /*    background: white;*/
     background: #FAFAFA;
-    width: 50%;
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -849,31 +849,39 @@ body {
     text-align: center;
 }
 
-.feedback input {
-    border: 0;
-    /*    background: #FAFAFA;*/
-    background: white;
-    border-radius: 5px;
-
-    padding: 10px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 26px;
-
-    margin-bottom: 20px;
-    margin-left: 6%;
-    margin-right: 6%;
+.feedback form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
 
 }
 
+.feedback input {
+    width: 100%;
+    border: 0;
+    background: white;
+    border-radius: 5px;
+
+    padding: 10px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+
+    margin-bottom: 20px;
+}
+
 .feedback textarea {
+    width: 100%;
     resize: none;
 
     border: 0;
-    /*    background: #FAFAFA;*/
     background: white;
 
     border-radius: 5px;
@@ -887,8 +895,7 @@ body {
     line-height: 26px;
 
     margin-bottom: 20px;
-    margin-left: 6%;
-    margin-right: 6%;
+
     height: 100%;
 }
 
@@ -916,17 +923,16 @@ body {
     outline-color: #FF8F19;
 }
 
-.feedback .submit {
+.feedback .submit-btn {
     color: white;
     box-sizing: border-box;
 
+    width: 100%;
 
     padding-top: 10px;
     padding-bottom: 10px;
 
     margin-bottom: 20px;
-    margin-left: 6%;
-    margin-right: 6%;
 
     font-style: normal;
     font-weight: 400;
@@ -973,8 +979,6 @@ body {
 
 .footer .footer-logo {
     flex: 1;
-    /*    height: 100%;*/
-    /*    max-height: 100px;*/
     padding: 10px;
 }
 
@@ -992,7 +996,6 @@ body {
 
     height: 100%;
     text-align: center;
-/*    margin-bottom: 40px;*/
 }
 
 .footer .main-content .nav li {
@@ -1024,7 +1027,6 @@ body {
 
 .footer .btn {
     border: 0;
-    /*    margin-right: 10px;*/
 }
 
 .social-frame {
@@ -1032,8 +1034,6 @@ body {
     background-color: #FF8F19;
     border-radius: 50%;
     margin-right: 10px;
-    /*    height: 100%;
-    width: 100%;*/
 }
 
 .social-contacts {
@@ -1043,8 +1043,6 @@ body {
 
 .footer .social-contacts .vk {
     background: url(../imgs/social/vk-white.png);
-    /*    background-color: #FF8F19;
-    border-radius: 50%;*/
     background-repeat: no-repeat;
     background-size: 20px 20px;
     height: 20px;

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/adaptive.css">
     <link rel="stylesheet" href="styles/hamburger.css">
     <script src="animations.js"></script>
+    <script src="feedback.js"></script>
 </head>
 
 <body>
@@ -266,11 +267,14 @@
                 <div class="feedback-form">
                     <div class="feedback">
                         <h1>Контактная форма</h1>
-                        <input type="text" placeholder="Имя*">
-                        <input type="text" placeholder="Email">
-                        <input type="text" placeholder="Телефон*">
-                        <textarea placeholder="Опишите подробно Ваш вопрос...*"></textarea>
-                        <button class="submit">Отправить</button>
+                        <form id="feedback-form">
+                            <input type="text" placeholder="Имя*" id="user-name" name="userName">
+                            <input type="text" placeholder="Email" id="user-email" name="userEmail">
+                            <input type="text" placeholder="Телефон*" id="user-phone" name="userPhone">
+                        
+                            <textarea class="question" placeholder="Опишите подробно Ваш вопрос...*" id="user-question" name="userQuestion"></textarea>
+                            <button class="submit-btn" id="send-feedback" type="submit">Отправить</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,6 @@ const apiRouter = express.Router();
  
 apiRouter.get("/getDogPhotos", petPhotos);
 apiRouter.get("/getDogInfo", petInfo);
-apiRouter.get("/sendFeedback", sendFeedback);
+apiRouter.post("/sendFeedback", sendFeedback);
 
 export {apiRouter};
