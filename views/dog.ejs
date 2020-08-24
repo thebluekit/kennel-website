@@ -63,8 +63,6 @@
             <div class="sales-text">
                 <h1 class="container-title"><%=mainInfo.dog_name.toUpperCase()%></h1>
                 <p class="city"><%=mainInfo.place_of_living%></p>
-                <p class="father"><%=mainInfo.father%></p>
-                <p class="mother"><%=mainInfo.mother%></p>
                 <div class="buttons">
                     <button class="btn-pets">Родословная</button>
                     <button class="btn-pets" id="photos-btn">Фотографии</button>
@@ -90,6 +88,8 @@
                     </p>
                 </div>
                 <div class="ranks">
+                    <p class="father"><%=mainInfo.father%></p>
+                    <p class="mother"><%=mainInfo.mother%></p>
                     <h2 class="ranks-title">Титулы:</h2>
                     <% if(rankInfo.length == 0){ %>
                         <p>У собаки пока нет никаких наград</p>

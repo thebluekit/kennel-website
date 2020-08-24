@@ -153,20 +153,29 @@
 
 .ranks .health p {
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
 
-    text-decoration-line: underline;
-    color: #FF8F19;
+    /* text-decoration: underline; */
+    color: black;
 }
 
 .hd::before{
+    font-weight: bold;
     content: "HD: ";
+    color: #FF8F19;
+    /* text-decoration: none; */
 }
 
 .ed::before{
+    font-weight: bold;
     content: "ED: ";
+    color: #FF8F19;
+    /* text-decoration: none; */
 }
 
 .jlpp::before{
+    font-weight: bold;
     content: "JLPP: ";
+    color: #FF8F19;
+    /* text-decoration: none; */
 }
